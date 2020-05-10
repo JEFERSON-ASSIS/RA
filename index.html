@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Hello!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
+    <title>R.A com Imagem</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>    
+  </head>
+  <body style="margin: 0px; overflow=hidden;">
+    <a-scene vr-mode-ui="enabled=false;" embledded arjs="debugUiEnabled: false;">
+        <a-assets>
+          <img id="foto" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2Fcartao.jpg?v=1589148652657">          
+        </a-assets>
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-  </body>
+        <a-marker present="hiro">
+
+          <a-image width="1" height="1" 
+                   rotation=" 0 0 0 " 
+                   position="0 0 0 " 
+                   src="#foto">
+          </a-image>     
+        </a-marker>
+
+
+        <a-entity camera></a-entity>
+      </a-scene>
+  </body>   
 </html>
