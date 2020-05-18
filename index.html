@@ -5,22 +5,26 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>    
   </head>
   <body style="margin: 0px; overflow=hidden;">
+   
     <a-scene vr-mode-ui="enabled=false;" embledded arjs="debugUiEnabled: false;">
-        <a-assets>
-          <img id="foto" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2Fsofa.dae?v=1589844662177">          
-        </a-assets>
+        
+      <a-assets>
+          <a-assets-item id="modelo" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2Fsofa.dae?v=1589844662177"></a-a>          
+      </a-assets>
 
         <a-marker present="hiro">
 
           <a-image width="1" height="1" 
                    rotation=" 0 0 0 " 
-                   position="0 0 0 " 
-                   src="#foto">
+                   position=" 0 0 0 " 
+                   src="#sofa">
           </a-image>     
-        </a-marker>
+        
+       </a-marker>
 
 
         <a-entity camera></a-entity>
+      
       </a-scene>
   </body>   
 </html>
