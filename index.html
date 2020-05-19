@@ -48,16 +48,16 @@
           id="produto"
           position="0 0 0"
           rotation="0 0 0"
-          scale="4 4 4"
+          scale="5 5 5"
           gltf-model="#modelo"
           animation__rotacao="property: rotation;
                               dir: normal;
                               dur: 10000;
                               easing: easeInSine;
-                              loop: true;
+                              loop: false;
                               to: 0 360 0"></a-entity>
         
-        <a-circle radius="1" color="white" rotation="-90 0 0"></a-circle>
+        <a-circle id="base" radius="1" color="white" rotation="-90 0 0"></a-circle>
       </a-marker>
 
       <a-entity camera></a-entity>
@@ -70,9 +70,13 @@
     
   var model = document.querySelector('#produto');
     
-  model.setAttribute("scale", {x: 6, y: 6, z: 6});
+  model.setAttribute("scale", {x: 7, y: 7, z: 7});
   
-  model.setAttribute("position", {x: 0, y: 0.2, z:0});
+  model.setAttribute("position", {x: 0, y: 0.1, z:0});
+    
+  var cicle = document.querySelector('#base');
+  
+  cicle.setAttribute("radius", "1.2");
     
   })
     
@@ -80,9 +84,13 @@
     
   var model = document.querySelector('#produto');
     
-  model.setAttribute("scale", {x: 4, y: 4, z: 4});
+  model.setAttribute("scale", {x: 5, y: 5, z: 5});
     
   model.setAttribute("position", {x: 0, y: 0, z:0});
+    
+  var cicle = document.querySelector('#base');
+  
+  cicle.setAttribute("radius", "1");
     
   })
        
