@@ -9,16 +9,15 @@
     <a-scene vr-mode-ui="enabled=false;" embledded arjs="debugUiEnabled: false;">
         
       <a-assets>
-          <a-assets-item id="modelo" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2FAnyConv.com__sofa.gltf?v=1589845984053"></a-assets-item>          
+          <a-assets-item id="modelo" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2Fsofa.obj?v=1589846594688"></a-assets-item>          
       </a-assets>
 
         <a-marker present="hiro">
 
-          <a-entity id="modelo"
-                    position="0 0 0"
-                    scale="0.02 0.02 0.02"
-                    gltf-model=
-                    ></a-entity>     
+          <a-entity position="0 0 0"
+                    rotation="0 0 0"
+                    scale="1 1 1"
+                    obj-model="obj: #modelo"></a-entity>     
         
        </a-marker>
 
