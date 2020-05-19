@@ -3,25 +3,39 @@
     <title>Minha R.A 1</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!-- tem que importar a biblioteca do componente aqui -->
+    <script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
+  
   </head>
   <body style="margin: 0px; overflow=hidden;">
     <a-scene
       vr-mode-ui="enabled=false;" embledded arjs="debugUiEnabled: false;"
       renderer="precision: medium; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;">
       <a-assets>
-        <a-assets-item id="modelo" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2Fuploads_files_2400084_%E7%8B%AC%E8%A7%92%E5%85%BD.glb?v=1589853914756"></a-assets-item>
+        <a-assets-item id="modelo" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2Fuploads_files_2397542_black_leather_chair.gltf?v=1589853247703"></a-assets-item>
       </a-assets>
 
       <a-marker present="hiro">
         <a-entity
-            
           id="modelo3d"
           position="0 0 0"
           rotation="0 0 0"
-          scale="0.2 0.2 0.2"
+          scale="1 1 1"
           gltf-model="#modelo"
-                  
-        ></a-entity>
+          animation__rotacao="property: rotation;
+                              dir: normal;
+                              dur: 10000;
+                              easing: easeInSine;
+                              loop: true;
+                              to: 0 360 0"></a-entity>
+        
+        <!-- usa essa animacao aqui para rotacionar o objeto: 
+            animation__rotacao="property: rotation;
+            dir: normal;
+            dur: 10000;
+            easing: easeInSine;
+            loop: true;
+            to: 0 360 0" -->
       </a-marker>
 
       <a-entity camera></a-entity>
