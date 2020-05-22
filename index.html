@@ -4,7 +4,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <!-- tem que importar a biblioteca do componente aqui -->
-    <script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>
+    <!--<script src="https://unpkg.com/aframe-animation-component@5.1.2/dist/aframe-animation-component.min.js"></script>-->
     
     <style>
   
@@ -35,33 +35,42 @@
   </div>
     
   </head>
+  
   <body style="margin: 0px; overflow=hidden;">
     <a-scene
-      vr-mode-ui="enabled=false;" embledded arjs="debugUiEnabled: false;"
+      vr-mode-ui="enabled=false;" embledded arjs="debugUiEnabled: false; detectionMode: mono_end_matrix; matrixCodeType:3x3;"
       renderer="precision: medium; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;">
       <a-assets>
-        <a-assets-item id="modelo" src="https://cdn.glitch.com/8d9a1eb7-a878-4e8d-82f3-8f4b05db62f8%2Fuploads_files_2372049_Adidas_Stan_smith_originals.glb?v=1589858987870"></a-assets-item>
+        <a-assets-item id="modelo" src=""></a-assets-item>
       </a-assets>
-
-      <a-marker present="hiro">
-        <a-entity
-          id="produto"
-          position="0 0 0"
-          rotation="0 0 0"
-          scale="5 5 5"
-          gltf-model="#modelo"
-          animation__rotacao="property: rotation;
-                              dir: normal;
-                              dur: 10000;
-                              easing: easeInSine;
-                              loop: true;
-                              to: 0 360 0"></a-entity>
+      
+      //marcador 0
+      
+      <a-marker type="barcode" value="0">
         
-        <a-circle id="base" radius="1" color="white" rotation="-90 0 0"></a-circle>
+        <a-box color="red"></a-box>
+        
+      </a-marker>
+      
+      //marcador 1
+      
+      <a-marker type="barcode" value="1">
+        
+        <a-box color="greem"></a-box>
+        
+      </a-marker>
+      
+      //marcador 2
+      
+      <a-marker type="barcode" value="2">
+        
+        <a-box color="blue"></a-box>
+        
       </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
+  
   </body>
   
   <script>
