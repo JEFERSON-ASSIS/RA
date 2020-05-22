@@ -38,16 +38,15 @@
   
   <body style="margin: 0px; overflow=hidden;">
     <a-scene
-      vr-mode-ui="enabled=false;" embledded arjs="debugUiEnabled: false; detectionMode: mono_end_matrix; matrixCodeType:3x3;"
-      renderer="precision: medium; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;">
-      <a-assets>
+      vr-mode-ui="enabled=false;" embledded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+      <!-- <a-assets>
         <a-assets-item id="modelo" src=""></a-assets-item>
-      </a-assets>
+      </a-assets>-->
       
         <!--marcador 0-->  
       <a-marker type="barcode" value="0">
         
-        <a-box color="red" scale="8 8 8"></a-box>
+        <a-box color="red" scale="1 1 1"></a-box>
         
       </a-marker>
       
@@ -55,7 +54,7 @@
       
       <a-marker type="barcode" value="1">
         
-        <a-box color="greem" scale="8 8 8"></a-box>
+        <a-box color="greem" scale="1 1 1"></a-box>
         
       </a-marker>
       
@@ -63,7 +62,7 @@
       
       <a-marker type="barcode" value="2">
         
-        <a-box color="blue" scale="8 8 8"></a-box>
+        <a-box color="blue" scale="1 1 1"></a-box>
         
       </a-marker>
 
@@ -72,7 +71,7 @@
   
   </body>
   
-  <script>
+  <!--<script>
   
   document.getElementById("btn1").addEventListener("click", (e)=>{
     
@@ -122,6 +121,6 @@
   })
 
     
-  </script>
+  </script>-->
   
 </html>
